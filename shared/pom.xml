@@ -41,8 +41,9 @@
         <dependency>
             <groupId>com.github.ProtocolSupport</groupId>
             <artifactId>ProtocolSupport</artifactId>
-            <version>f188eb2ea8</version>
-            <scope>provided</scope>
+            <version>1.18.2-1-dev</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ProtocolSupport.jar</systemPath>
         </dependency>
     </dependencies>
 

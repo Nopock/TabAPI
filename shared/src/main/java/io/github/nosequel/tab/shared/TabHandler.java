@@ -33,7 +33,12 @@ public class TabHandler {
         this.handler = handler;
         this.ticks = ticks;
 
-        new TabRunnable(this).runTaskTimer(plugin, 20L, ticks);
+        if (Bukkit.getServer().getClass().getPackage().getName().contains("1.8")) {
+            new TabRunnable(this).runTaskTimer(plugin, 20L, ticks);
+        } else {
+            new TabRunnable(this).runTaskTimerAsynchronously(plugin, 20L, ticks);
+        }
+
     }
 
     /**
